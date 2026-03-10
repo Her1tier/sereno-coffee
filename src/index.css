@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-accent: #FC4C02;
+  --color-brand-dark: #1A1A1A;
+  --color-brand-light: #FBF7ED;
+  --color-white: #FBF7ED;
+
+  --font-sans: "Inter", "Helvetica Neue", "Arial", sans-serif;
+
+  --animate-infinite-scroll: infinite-scroll 35s linear infinite;
+
+  @keyframes infinite-scroll {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: var(--color-brand-light);
+    color: var(--color-brand-dark);
+  }
+
+  body {
+    @apply antialiased selection:bg-brand-accent selection:text-white;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glass-panel {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+}
