@@ -1,26 +1,17 @@
 import { motion } from 'framer-motion';
 
-const galleryImages = [
-    "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=800&auto=format&fit=crop", // Cafe interior peeps
-    "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=800&auto=format&fit=crop", // People drinking coffee
-    "https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=800&auto=format&fit=crop", // People chatting
-    "https://images.unsplash.com/photo-1525610553991-2bede1a236e2?q=80&w=800&auto=format&fit=crop", // Food styling
-    "https://images.unsplash.com/photo-1623800330571-0f73587b1e42?q=80&w=800&auto=format&fit=crop", // Barista
-    "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=800&auto=format&fit=crop", // People eating breakfast
-];
-
 export default function Highlights() {
     return (
-        <section className="bg-brand-light relative z-20 sticky top-0 h-screen overflow-hidden flex flex-col justify-center">
-            <div className="w-full pt-24 pb-20">
-
+        <section className="bg-brand-light py-24 z-20 relative">
+            <div className="w-[calc(100%-40px)] md:w-[calc(100%-80px)] max-w-7xl mx-auto px-0">
+                
                 {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                    className="text-center mb-10 md:mb-16 px-6"
+                    className="mb-10 md:mb-16"
                 >
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-brand-dark mb-2 md:mb-4">
                         Sereno Experience
@@ -30,27 +21,182 @@ export default function Highlights() {
                     </p>
                 </motion.div>
 
-                {/* Auto-scrolling Gallery Container */}
-                <div className="relative w-full overflow-hidden">
-                    {/* Shadow overlays for smooth edge fading */}
-                    <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-brand-light to-transparent z-10 pointer-events-none"></div>
-                    <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-brand-light to-transparent z-10 pointer-events-none"></div>
+                <div className="flex flex-col gap-16 md:gap-32">
+                    {/* Block 1 */}
+                    <div className="flex flex-col gap-4 md:gap-6">
+                        {/* Top Big Image */}
+                        <motion.div 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                            className="w-full h-[120vh] rounded-2xl md:rounded-3xl overflow-hidden relative"
+                        >
+                            <img 
+                                src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1600&auto=format&fit=crop" 
+                                alt="Sereno Cafe Interior" 
+                                className="w-full h-full object-cover"
+                            />
+                        </motion.div>
 
-                    {/* Scrolling Track */}
-                    <div className="flex w-max animate-infinite-scroll hover:[animation-play-state:paused] gap-6 px-6">
-                        {/* Duplicate array for seamless infinite scroll */}
-                        {[...galleryImages, ...galleryImages].map((image, index) => (
-                            <div
-                                key={index}
-                                className="w-[280px] md:w-[350px] aspect-[4/5] overflow-hidden rounded-xl flex-shrink-0"
+                        {/* Bottom Row: 2 Images Left, 1 Description Right */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                            
+                            {/* Image 1 (Left) */}
+                            <motion.div 
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-100px" }}
+                                transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+                                className="w-full h-[350px] md:h-[450px] rounded-2xl md:rounded-3xl overflow-hidden relative group"
                             >
-                                <img
-                                    src={image}
-                                    alt={`Sereno Experience ${index}`}
-                                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                                <img 
+                                    src="https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=800&auto=format&fit=crop" 
+                                    alt="Pouring Coffee" 
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
-                            </div>
-                        ))}
+                                {/* Overlay text */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80"></div>
+                                <div className="absolute top-4 left-4 md:top-6 md:left-6 flex items-center gap-2">
+                                    <span className="px-2 py-1 bg-black/20 backdrop-blur-md rounded-md text-white text-xs font-medium border border-white/10">Sereno Craft</span>
+                                </div>
+                                <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 flex items-center gap-2 text-white">
+                                    <div className="w-6 h-6 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                                        <svg className="w-3 h-3 fill-white" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                    </div>
+                                    <span className="text-sm font-medium tracking-wide">Perfecting the pour</span>
+                                </div>
+                            </motion.div>
+
+                            {/* Image 2 (Middle) */}
+                            <motion.div 
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-100px" }}
+                                transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                                className="w-full h-[350px] md:h-[450px] rounded-2xl md:rounded-3xl overflow-hidden relative group"
+                            >
+                                <img 
+                                    src="https://images.unsplash.com/photo-1623800330571-0f73587b1e42?q=80&w=800&auto=format&fit=crop" 
+                                    alt="Barista at work" 
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80"></div>
+                                <div className="absolute top-4 left-4 md:top-6 md:left-6 flex items-center gap-2">
+                                    <span className="px-2 py-1 bg-black/20 backdrop-blur-md rounded-md text-white text-xs font-medium border border-white/10">Sereno Craft</span>
+                                </div>
+                                <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 flex items-center gap-2 text-white">
+                                    <div className="w-6 h-6 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                                        <svg className="w-3 h-3 fill-white" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                    </div>
+                                    <span className="text-sm font-medium tracking-wide">Crafting your morning</span>
+                                </div>
+                            </motion.div>
+
+                            {/* Description Card (Right) */}
+                            <motion.div 
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-100px" }}
+                                transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                                className="w-full h-[350px] md:h-[450px] rounded-2xl md:rounded-3xl bg-[#FAF8F3] p-8 md:p-10 flex flex-col justify-center border border-brand-dark/5 shadow-sm overflow-y-auto"
+                            >
+                                <h3 className="text-lg md:text-xl font-medium tracking-tight text-brand-dark mb-6">
+                                    Every coffee is different. Sereno works in yours.
+                                </h3>
+                                <p className="text-brand-dark/80 leading-relaxed text-sm md:text-base">
+                                    We believe Sereno should be easy to use in the real-world, working harmoniously out-of-the-box. Hundreds of people in unique moments show Sereno how a coffee break is enjoyed each day, so Sereno can robustly handle the chaos of real life.
+                                </p>
+                            </motion.div>
+                        </div>
+                    </div>
+
+                    {/* Block 2 */}
+                    <div className="flex flex-col gap-4 md:gap-6">
+                        {/* Top Big Image */}
+                        <motion.div 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                            className="w-full h-[120vh] rounded-2xl md:rounded-3xl overflow-hidden relative"
+                        >
+                            <img 
+                                src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=1600&auto=format&fit=crop" 
+                                alt="Coffee beans" 
+                                className="w-full h-full object-cover"
+                            />
+                        </motion.div>
+
+                        {/* Bottom Row: 2 Images Left, 1 Description Right */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                            
+                            {/* Image 1 (Left) */}
+                            <motion.div 
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-100px" }}
+                                transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+                                className="w-full h-[350px] md:h-[450px] rounded-2xl md:rounded-3xl overflow-hidden relative group"
+                            >
+                                <img 
+                                    src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=800&auto=format&fit=crop" 
+                                    alt="Coffee shop lively atmosphere" 
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80"></div>
+                                <div className="absolute top-4 left-4 md:top-6 md:left-6 flex items-center gap-2">
+                                    <span className="px-2 py-1 bg-black/20 backdrop-blur-md rounded-md text-white text-xs font-medium border border-white/10">Sereno Atmosphere</span>
+                                </div>
+                                <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 flex items-center gap-2 text-white">
+                                    <div className="w-6 h-6 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                                        <svg className="w-3 h-3 fill-white" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                    </div>
+                                    <span className="text-sm font-medium tracking-wide">Community energy</span>
+                                </div>
+                            </motion.div>
+
+                            {/* Image 2 (Middle) */}
+                            <motion.div 
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-100px" }}
+                                transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                                className="w-full h-[350px] md:h-[450px] rounded-2xl md:rounded-3xl overflow-hidden relative group"
+                            >
+                                <img 
+                                    src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=800&auto=format&fit=crop" 
+                                    alt="Breakfast pastry" 
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80"></div>
+                                <div className="absolute top-4 left-4 md:top-6 md:left-6 flex items-center gap-2">
+                                    <span className="px-2 py-1 bg-black/20 backdrop-blur-md rounded-md text-white text-xs font-medium border border-white/10">Sereno Taste</span>
+                                </div>
+                                <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 flex items-center gap-2 text-white">
+                                    <div className="w-6 h-6 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                                        <svg className="w-3 h-3 fill-white" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                    </div>
+                                    <span className="text-sm font-medium tracking-wide">Fresh daily pastries</span>
+                                </div>
+                            </motion.div>
+
+                            {/* Description Card (Right) */}
+                            <motion.div 
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-100px" }}
+                                transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                                className="w-full h-[350px] md:h-[450px] rounded-2xl md:rounded-3xl bg-[#FAF8F3] p-8 md:p-10 flex flex-col justify-center border border-brand-dark/5 shadow-sm overflow-y-auto"
+                            >
+                                <h3 className="text-lg md:text-xl font-medium tracking-tight text-brand-dark mb-6">
+                                    Designed for your daily rituals.
+                                </h3>
+                                <p className="text-brand-dark/80 leading-relaxed text-sm md:text-base">
+                                    Our spaces are crafted to match your rhythm. Whether you are finding a quiet corner to focus with a latte or catching up with friends over brunch, Sereno provides an inviting sanctuary just for you.
+                                </p>
+                            </motion.div>
+                        </div>
                     </div>
                 </div>
 
