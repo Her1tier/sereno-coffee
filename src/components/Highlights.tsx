@@ -30,7 +30,7 @@ export default function Highlights() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                            className="w-full h-[120vh] rounded-2xl md:rounded-3xl overflow-hidden relative"
+                            className="w-full h-[120vh] rounded-xl md:rounded-2xl overflow-hidden relative"
                         >
                             <img 
                                 src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1600&auto=format&fit=crop" 
@@ -48,7 +48,7 @@ export default function Highlights() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: "-100px" }}
                                 transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                                className="w-full h-[350px] md:h-[450px] rounded-2xl md:rounded-3xl overflow-hidden relative group"
+                                className="w-full h-[350px] md:h-[450px] rounded-xl md:rounded-2xl overflow-hidden relative group"
                             >
                                 <img 
                                     src="https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=800&auto=format&fit=crop" 
@@ -74,7 +74,7 @@ export default function Highlights() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: "-100px" }}
                                 transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                                className="w-full h-[350px] md:h-[450px] rounded-2xl md:rounded-3xl overflow-hidden relative group"
+                                className="w-full h-[350px] md:h-[450px] rounded-xl md:rounded-2xl overflow-hidden relative group"
                             >
                                 <img 
                                     src="https://images.unsplash.com/photo-1623800330571-0f73587b1e42?q=80&w=800&auto=format&fit=crop" 
@@ -99,7 +99,7 @@ export default function Highlights() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: "-100px" }}
                                 transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                                className="w-full h-[350px] md:h-[450px] rounded-2xl md:rounded-3xl bg-[#FAF8F3] p-8 md:p-10 flex flex-col justify-center border border-brand-dark/5 shadow-sm overflow-y-auto"
+                                className="w-full h-[350px] md:h-[450px] rounded-xl md:rounded-2xl bg-[#FAF8F3] p-8 md:p-10 flex flex-col justify-center border border-brand-dark/5 shadow-sm overflow-y-auto"
                             >
                                 <h3 className="text-lg md:text-xl font-medium tracking-tight text-brand-dark mb-6">
                                     Every coffee is different. Sereno works in yours.
@@ -119,7 +119,7 @@ export default function Highlights() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                            className="w-full h-[120vh] rounded-2xl md:rounded-3xl overflow-hidden relative"
+                            className="w-full h-[120vh] rounded-xl md:rounded-2xl overflow-hidden relative"
                         >
                             <img 
                                 src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=1600&auto=format&fit=crop" 
@@ -137,7 +137,7 @@ export default function Highlights() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: "-100px" }}
                                 transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                                className="w-full h-[350px] md:h-[450px] rounded-2xl md:rounded-3xl overflow-hidden relative group"
+                                className="w-full h-[350px] md:h-[450px] rounded-xl md:rounded-2xl overflow-hidden relative group"
                             >
                                 <img 
                                     src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=800&auto=format&fit=crop" 
@@ -162,7 +162,7 @@ export default function Highlights() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: "-100px" }}
                                 transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                                className="w-full h-[350px] md:h-[450px] rounded-2xl md:rounded-3xl overflow-hidden relative group"
+                                className="w-full h-[350px] md:h-[450px] rounded-xl md:rounded-2xl overflow-hidden relative group"
                             >
                                 <img 
                                     src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=800&auto=format&fit=crop" 
