@@ -81,10 +81,10 @@ export default function Navigation() {
                             animate={{ scale: 1, opacity: 1, y: 0 }}
                             exit={{ scale: 0.95, opacity: 0, y: 20 }}
                             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                            className="bg-white w-full max-w-4xl rounded-2xl md:rounded-3xl p-6 md:p-10 shadow-2xl overflow-hidden relative"
+                            className="bg-white w-[90%] md:w-auto md:min-w-[600px] max-w-3xl rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-2xl overflow-hidden relative"
                         >
                             {/* Modal Header */}
-                            <div className="flex justify-between items-center mb-10 md:mb-16">
+                            <div className="flex justify-between items-center mb-8 md:mb-12">
                                 <svg className="w-8 h-8 text-brand-dark" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7zm0 11c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
                                     <circle cx="12" cy="9" r="2"/>
@@ -103,20 +103,20 @@ export default function Navigation() {
                             </div>
 
                             {/* Modal Content Grid */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mb-12 md:mb-16 items-center">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-10 md:mb-12 items-center">
                                 
                                 {/* Navigation Links */}
-                                <div className="flex flex-col space-y-4 md:space-y-6">
-                                    <a href="#about" onClick={() => setIsMenuOpen(false)} className="text-xl md:text-3xl hover:text-brand-dark text-brand-dark/80 transition-colors font-medium tracking-tight">
+                                <div className="flex flex-col space-y-3 md:space-y-5">
+                                    <a href="#about" onClick={() => setIsMenuOpen(false)} className="text-xl md:text-2xl hover:text-brand-dark text-brand-dark/80 transition-colors font-medium tracking-tight">
                                         Our Story
                                     </a>
-                                    <a href="#menu" onClick={() => setIsMenuOpen(false)} className="text-xl md:text-3xl hover:text-brand-dark text-brand-dark/80 transition-colors font-medium tracking-tight">
+                                    <a href="#menu" onClick={() => setIsMenuOpen(false)} className="text-xl md:text-2xl hover:text-brand-dark text-brand-dark/80 transition-colors font-medium tracking-tight">
                                         Menu
                                     </a>
-                                    <a href="#booking" onClick={() => setIsMenuOpen(false)} className="text-xl md:text-3xl hover:text-brand-dark text-brand-dark/80 transition-colors font-medium tracking-tight">
+                                    <a href="#booking" onClick={() => setIsMenuOpen(false)} className="text-xl md:text-2xl hover:text-brand-dark text-brand-dark/80 transition-colors font-medium tracking-tight">
                                         Reservations
                                     </a>
-                                    <a href="https://wa.me/250783343290" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="text-xl md:text-3xl hover:text-brand-dark text-brand-dark/80 transition-colors font-medium tracking-tight">
+                                    <a href="https://wa.me/250783343290" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="text-xl md:text-2xl hover:text-brand-dark text-brand-dark/80 transition-colors font-medium tracking-tight">
                                         Order Online
                                     </a>
                                 </div>
@@ -142,7 +142,7 @@ export default function Navigation() {
                             </div>
 
                             {/* Modal Footer */}
-                            <div className="flex flex-col md:flex-row justify-between items-start md:items-center pt-6 border-t border-brand-dark/10 gap-4 md:gap-0">
+                            <div className="flex flex-col md:flex-row justify-between items-start md:items-center pt-6 border-t border-brand-dark/10 gap-3 md:gap-0">
                                 <span className="text-brand-dark/50 text-xs md:text-sm font-medium tracking-wide">
                                     The finest dining experience in Musanze
                                 </span>

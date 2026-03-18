@@ -30,13 +30,22 @@ export default function Highlights() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                            className="w-full h-[120vh] rounded-xl md:rounded-2xl overflow-hidden relative"
+                            className="w-full h-[120vh] rounded-xl md:rounded-2xl overflow-hidden relative flex items-center justify-center p-6"
                         >
                             <img 
                                 src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1600&auto=format&fit=crop" 
                                 alt="Sereno Cafe Interior" 
-                                className="w-full h-full object-cover"
+                                className="absolute inset-0 w-full h-full object-cover"
                             />
+                            {/* Overlay for text readability */}
+                            <div className="absolute inset-0 bg-black/30"></div>
+                            
+                            {/* Centered Text */}
+                            <div className="relative z-10 text-center max-w-4xl mx-auto">
+                                <h3 className="text-4xl md:text-6xl lg:text-7xl font-medium text-white tracking-tight leading-tight">
+                                    Sereno works in moments<br/>it's never seen
+                                </h3>
+                            </div>
                         </motion.div>
 
                         {/* Bottom Row: 2 Images Left, 1 Description Right */}
@@ -119,13 +128,22 @@ export default function Highlights() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                            className="w-full h-[120vh] rounded-xl md:rounded-2xl overflow-hidden relative"
+                            className="w-full h-[120vh] rounded-xl md:rounded-2xl overflow-hidden relative flex items-center justify-center p-6"
                         >
                             <img 
                                 src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=1600&auto=format&fit=crop" 
                                 alt="Coffee beans" 
-                                className="w-full h-full object-cover"
+                                className="absolute inset-0 w-full h-full object-cover"
                             />
+                            {/* Overlay for text readability */}
+                            <div className="absolute inset-0 bg-black/30"></div>
+                            
+                            {/* Centered Text */}
+                            <div className="relative z-10 text-center max-w-4xl mx-auto">
+                                <h3 className="text-4xl md:text-6xl lg:text-7xl font-medium text-white tracking-tight leading-tight">
+                                    Sereno is always expanding<br/>its sanctuary
+                                </h3>
+                            </div>
                         </motion.div>
 
                         {/* Bottom Row: 2 Images Left, 1 Description Right */}
