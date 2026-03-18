@@ -39,12 +39,12 @@ export default function Navigation() {
             {/* Floating Navigation Pill */}
             <nav className={`fixed top-6 left-1/2 -translate-x-1/2 z-[60] transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-[150%]'}`}>
                 <div className="bg-white px-6 py-4 rounded-xl md:rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] flex items-center justify-between gap-12 md:gap-32 border border-brand-dark/5">
-                    
+
                     {/* Left Icon / Logo Mark */}
                     <div className="flex items-center">
-                        <svg className="w-8 h-8 text-brand-dark" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7zm0 11c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
-                            <circle cx="12" cy="9" r="2"/>
+                        <svg className="w-8 h-8 text-brand-accent" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7zm0 11c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z" />
+                            <circle cx="12" cy="9" r="2" />
                         </svg>
                     </div>
 
@@ -54,7 +54,7 @@ export default function Navigation() {
                     </a>
 
                     {/* Right Hamburger */}
-                    <button 
+                    <button
                         onClick={() => setIsMenuOpen(true)}
                         className="flex flex-col gap-[5px] p-2 hover:opacity-70 transition-opacity"
                         aria-label="Open Menu"
@@ -62,21 +62,21 @@ export default function Navigation() {
                         <span className="w-6 h-[2px] bg-brand-dark block rounded-full"></span>
                         <span className="w-6 h-[2px] bg-brand-dark block rounded-full"></span>
                     </button>
-                    
+
                 </div>
             </nav>
 
             {/* Full Screen Overlay Menu */}
             <AnimatePresence>
                 {isMenuOpen && (
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
                         className="fixed inset-0 z-[70] bg-black/40 backdrop-blur-sm flex items-center justify-center p-4 md:p-8"
                     >
-                        <motion.div 
+                        <motion.div
                             initial={{ scale: 0.95, opacity: 0, y: 20 }}
                             animate={{ scale: 1, opacity: 1, y: 0 }}
                             exit={{ scale: 0.95, opacity: 0, y: 20 }}
@@ -85,16 +85,16 @@ export default function Navigation() {
                         >
                             {/* Modal Header */}
                             <div className="flex justify-between items-center mb-8 md:mb-12">
-                                <svg className="w-8 h-8 text-brand-dark" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7zm0 11c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
-                                    <circle cx="12" cy="9" r="2"/>
+                                <svg className="w-8 h-8 text-brand-accent" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7zm0 11c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z" />
+                                    <circle cx="12" cy="9" r="2" />
                                 </svg>
 
                                 <span className="text-xl md:text-2xl font-bold tracking-[0.2em] text-brand-dark uppercase absolute left-1/2 -translate-x-1/2">
                                     Sereno
                                 </span>
 
-                                <button 
+                                <button
                                     onClick={() => setIsMenuOpen(false)}
                                     className="p-2 hover:bg-black/5 rounded-full transition-colors"
                                 >
@@ -104,7 +104,7 @@ export default function Navigation() {
 
                             {/* Modal Content Grid */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-10 md:mb-12 items-center">
-                                
+
                                 {/* Navigation Links */}
                                 <div className="flex flex-col space-y-3 md:space-y-5">
                                     <a href="#about" onClick={() => setIsMenuOpen(false)} className="text-xl md:text-2xl hover:text-brand-dark text-brand-dark/80 transition-colors font-medium tracking-tight">
@@ -123,16 +123,16 @@ export default function Navigation() {
 
                                 {/* Video / Image Card */}
                                 <div className="relative w-full aspect-video rounded-2xl md:rounded-3xl overflow-hidden bg-brand-dark group transform transition-transform duration-500 hover:scale-[1.02]">
-                                    <img 
-                                        src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=800&auto=format&fit=crop" 
-                                        alt="Sereno Story" 
+                                    <img
+                                        src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=800&auto=format&fit=crop"
+                                        alt="Sereno Story"
                                         className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500"
                                     />
                                     <div className="absolute inset-0 flex items-center justify-center">
                                         <div className="flex items-center gap-3 px-6 py-3 bg-white/20 backdrop-blur-md rounded-full border border-white/30 text-white hover:bg-white/30 transition-colors cursor-pointer">
                                             <div className="w-6 h-6 rounded-full bg-white flex items-center justify-center">
                                                 <svg className="w-3 h-3 text-brand-dark translate-x-[1px]" viewBox="0 0 24 24" fill="currentColor">
-                                                    <path d="M8 5v14l11-7z"/>
+                                                    <path d="M8 5v14l11-7z" />
                                                 </svg>
                                             </div>
                                             <span className="font-medium text-sm">Our story</span>
@@ -147,11 +147,6 @@ export default function Navigation() {
                                     The finest dining experience in Musanze
                                 </span>
                                 <div className="flex items-center gap-6 md:gap-12 w-full md:w-auto justify-between md:justify-end text-brand-dark/50 text-xs md:text-sm font-medium tracking-wide">
-                                    <span>Opening 2026</span>
-                                    <div className="flex items-center gap-2">
-                                        <span>Reserve Now</span>
-                                        <div className="w-2 h-2 rounded-full bg-brand-accent"></div>
-                                    </div>
                                 </div>
                             </div>
 
